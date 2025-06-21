@@ -1,0 +1,72 @@
+@keyframes floatAndScale {
+  0% {
+    transform: translateY(0) scale(1); /* 시작 위치 및 크기 */
+  }
+  50% {
+    transform: translateY(-10px) scale(1.1); /* 위로 이동하고 크기 증가 */
+  }
+  100% {
+    transform: translateY(0) scale(1); /* 원래 위치 및 크기로 복귀 */
+  }
+}
+@keyframes ScaleBig {
+  0% {
+    transform: scale(1); /* 원래 위치 및 크기로 복귀 */
+  }
+  50% {
+    transform: scale(1.2); /* 위로 이동하고 크기 증가 */
+  }
+  100% {
+    transform: scale(1); /* 원래 위치 및 크기로 복귀 */
+  }
+}
+
+@keyframes Scale {
+  0% {
+    transform: scale(1); /* 원래 위치 및 크기로 복귀 */
+  }
+  50% {
+    transform: scale(1.1); /* 위로 이동하고 크기 증가 */
+  }
+  100% {
+    transform: scale(1); /* 원래 위치 및 크기로 복귀 */
+  }
+}
+
+.bg_berry,
+.bg_cherry,
+.bg_heart_pink,
+.bg_heart_purple,
+.bg_butterfly {
+  animation: floatAndScale 2s ease-in-out infinite;
+  transform-origin: center;
+}
+.bg_berry {
+  position: fixed;
+  rotate: -22.7deg;
+  top: 25px;
+  left: 13px;
+}
+.bg_cherry {
+  position: fixed;
+  rotate: -15deg;
+  top: 50px;
+  right: 20px;
+}
+.bg_heart_purple {
+  position: fixed;
+  top: 180px;
+  left: 22%;
+}
+.bg_heart_pink {
+  position: fixed;
+  rotate: 27deg;
+  top: 400px;
+  right: 20px;
+}
+.bg_butterfly {
+  position: fixed;
+  rotate: -1-deg;
+  top: 500px;
+  left: 20px;
+}

@@ -1,23 +1,50 @@
-import style from "./Header.module.scss";
+"use client";
+import React from "react";
+import { useState, useEffect } from "react";
+import styles from "./Header.module.scss";
+import cn from "classnames";
 
 const Header = () => {
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+  const handleScroll = () => {
+    const position = window.pageYOffset;
+    setScrollPosition(position);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
-    <header className={style.header}>
-      <h1>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 103 26"
-          width="103"
-          height="26"
-        >
-          <g fill="#fff">
-            <path d="M30.216 17.736c2.392 2.97 8.1.619 9.593-.783v7.597c-9.594 3.084-19.188 1.65-18.83-8.225.43-11.86 19.412-13.037 19.023-4.674-.088 1.894-1.006 5.341-9.786 6.085m-.65-1.41c4.746-1.777 3.461-3.943 2.406-4.203-.958-.236-2.86.376-2.407 4.202"></path>
-            <path d="M21.72 7.686c-.19 5.534-5.976 5.903-6.312 5.92.66.205 3.837 1.275 4.057 4.628.494 7.54-7.568 7.54-9.551 7.54H0V.6c19.893-2.546 21.84 3.616 21.72 7.086zm-10.076 9.6c0-2.406-3.046-2.05-3.046-2.05v4.253s3.046.3 3.046-2.203m.999-8.362c0-2.33-4.045-1.785-4.045-1.785v3.947s4.045.549 4.045-2.162M102.31 13.179V6.475H85.493v8.387l10.297-2.757v.82c-6.334.86-10.634 6.475-10.634 12.85h17.154v-8.806l-8.577 2.296c2.138-4.668 6.635-5.698 8.577-6.086M58.4 6.474h8.135L65.18 12.37h.904c0-3.033 1.86-7.135 7.23-5.897v8.386c-2.349 0-6.316-.26-6.316 5.657v5.257H58.4zM41.695 6.474h8.135l-1.355 5.897h.904c0-3.033 1.86-7.135 7.23-5.897v8.386c-2.349 0-6.316-.26-6.316 5.657v5.257h-8.598zM74.77 6.37C75 4.04 77.26 2.196 79.82 2.254c2.557.057 4.446 1.993 4.216 4.326s-2.489 4.176-5.048 4.119c-2.557-.058-4.446-1.994-4.216-4.327m4.118 5.352c-1.516-.034-2.84-.631-3.783-1.528v15.58h8.598V9.754c-1.176 1.254-2.93 2.01-4.815 1.967"></path>
-          </g>
-        </svg>
-      </h1>
-    </header>
+    <>
+      <header className={styles.header}>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+          rel="stylesheet"
+        ></link>
+        <h1 className={styles.header_title}>SEOOEONS</h1>
+      </header>
+      <header
+        className={cn(
+          styles.header_floating,
+          scrollPosition > 100 && styles.show
+        )}
+      >
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+          rel="stylesheet"
+        ></link>
+        <h1 className={styles.header_title}>SEOOEONS</h1>
+      </header>
+    </>
   );
 };
 

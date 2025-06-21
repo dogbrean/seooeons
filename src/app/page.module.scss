@@ -1,0 +1,155 @@
+@keyframes floatAndScale {
+  0% {
+    transform: translateY(0) scale(1); /* 시작 위치 및 크기 */
+  }
+  50% {
+    transform: translateY(-10px) scale(1.1); /* 위로 이동하고 크기 증가 */
+  }
+  100% {
+    transform: translateY(0) scale(1); /* 원래 위치 및 크기로 복귀 */
+  }
+}
+@keyframes ScaleBig {
+  0% {
+    transform: scale(1); /* 원래 위치 및 크기로 복귀 */
+  }
+  50% {
+    transform: scale(1.2); /* 위로 이동하고 크기 증가 */
+  }
+  100% {
+    transform: scale(1); /* 원래 위치 및 크기로 복귀 */
+  }
+}
+
+@keyframes Scale {
+  0% {
+    transform: scale(1); /* 원래 위치 및 크기로 복귀 */
+  }
+  50% {
+    transform: scale(1.1); /* 위로 이동하고 크기 증가 */
+  }
+  100% {
+    transform: scale(1); /* 원래 위치 및 크기로 복귀 */
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.main {
+  @font-face {
+    font-family: "SBAggroB";
+    src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff")
+      format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+  position: relative;
+  text-align: center;
+  padding-bottom: 50px;
+  .content {
+    position: relative;
+    z-index: 10;
+    padding: 0 20px;
+  }
+  .title {
+    font-size: 24px;
+    line-height: 30px;
+    height: 30px;
+  }
+  .section_title {
+    margin-top: 15px;
+    font-size: 21px;
+  }
+  .description {
+    margin-top: 10px;
+    font-size: 17px;
+  }
+  .description_good {
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: 700;
+    animation: ScaleBig 2s ease-in-out infinite;
+    transform-origin: center;
+  }
+
+  .description_best {
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: 500;
+    animation: Scale 2s ease-in-out infinite;
+  }
+
+  audio {
+    display: none;
+  }
+}
+
+.text_arrow {
+  margin: 70px 0 35px;
+  font-size: 25px;
+  font-weight: 500;
+  animation: fadein 1s ease 4s;
+  animation-fill-mode: backwards;
+}
+
+.icon_arrow {
+  animation: fadein 1s ease 5s, floatAndScale 2s ease infinite;
+  animation-fill-mode: backwards;
+}
+
+.profile_wrap {
+  position: relative;
+  backdrop-filter: blur(100px);
+  background-size: cover;
+  margin: 30px -20px;
+  padding-bottom: 30px;
+  animation: fadein 0.8s ease 5.5s;
+  animation-fill-mode: backwards;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(50px); /* 배경 블러 효과 */
+    z-index: -1; /* 배경 이미지가 텍스트 아래에 위치하도록 설정 */
+  }
+}
+
+.profile_image {
+  display: block;
+  padding: 50px;
+  border-radius: 50%;
+  margin: 0 auto;
+  width: 250px;
+  height: 250px;
+}
+
+.profile_title {
+  display: block;
+  margin-top: 20px;
+  font-size: 30px;
+}
+
+.profile_description {
+  display: block;
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: 400;
+  color: #ffffffb3;
+}
+
+.swiper_title {
+  font-size: 25px;
+  margin: 30px 0 15px;
+}

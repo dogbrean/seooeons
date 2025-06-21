@@ -33,28 +33,19 @@ export default function MySwiper() {
         className="mySwiper"
       >
         <SwiperSlide>
-          <img src="/profile_1.png" />
+          <img src="/profile_2.jpg" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="/profile_1.png" />
+          <img src="/profile_3.jpg" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="/profile_1.png" />
+          <img src="/profile_4.jpg" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="/profile_1.png" />
+          <img src="/profile_5.jpg" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="/profile_1.png" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="/profile_1.png" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="/profile_1.png" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="/profile_1.png" />
+          <img src="/profile_6.jpg" />
         </SwiperSlide>
       </Swiper>
     </>

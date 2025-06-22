@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 
 import cn from "classnames";
 
-import s from "./updownAnimationNumber.module.scss";
+import s from "./UpdownAnimationNumber.module.scss";
 
 type Props = {
   number: number;

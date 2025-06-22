@@ -24,14 +24,6 @@ function TimeDifference() {
     secondsOneDigits: 0,
   });
 
-  const formatNumberWithLeadingZeros = (number: number) => {
-    if (number < 10) {
-      return "0" + number;
-    } else {
-      return number.toString();
-    }
-  };
-
   const getTensDigit = (number: number): number => {
     return ((number % 100) - (number % 10)) / 10;
   };

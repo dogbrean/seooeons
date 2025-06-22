@@ -1,0 +1,14 @@
+.updown_count_down_number {
+  display: inline-flex;
+  height: 100%;
+  transition-property: transform, width;
+  .number {
+    height: 100%;
+  }
+  &.up {
+    flex-direction: column-reverse;
+  }
+  &.down {
+    flex-direction: column;
+  }
+}

@@ -3,7 +3,7 @@ import styles from "./BackgroundImages.module.scss";
 
 const BackgroundImages = () => {
   return (
-    <div>
+    <div className={styles.background_image_wrap}>
       <Image
         src={"/berry.png"}
         width={61}

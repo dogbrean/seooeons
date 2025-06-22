@@ -33,6 +33,11 @@
   }
 }
 
+.background_image_wrap {
+  position: relative;
+  z-index: 100000;
+}
+
 .bg_berry,
 .bg_cherry,
 .bg_heart_pink,

@@ -36,7 +36,7 @@
   transform: translateY(-100%);
   transition-property: transform;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 0.15s;
+  transition-duration: 0.21s;
   background-color: #121212;
   &.show {
     transform: none;

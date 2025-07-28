@@ -83,7 +83,10 @@ export default function Home() {
         <Timer />
         <section>
           <h3 className={cn(styles.swiper_title)}>~~서연이의 사진~~</h3>
-          <MySwiper />
+          <h4 className={cn(styles.swiper_desc)}>
+            은~~문제있을까봐~~삭제해뒀어요~~
+          </h4>
+          {/* <MySwiper /> */}
         </section>
         <section></section>
         <section></section>

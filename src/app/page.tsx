@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import styles from "./page.module.scss";
-import MySwiper from "@/components/Swiper/Swiper";
+// import MySwiper from "@/components/Swiper/Swiper";
 import Timer from "@/components/Timer/Timer";
 import cn from "classnames";
 import TypingAnimation from "@/components/TypingAnimation/TypingAnimation";
